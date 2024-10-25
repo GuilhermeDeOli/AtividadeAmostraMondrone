@@ -1,0 +1,260 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logo img {
+    max-height: 6vh; 
+    margin: 1vh;
+}
+
+nav {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: #22a8db;
+    height: 8vh;
+}
+
+main {
+    height: 92vh;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: #22a8db;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        opacity: 0; 
+        visibility: hidden; 
+    }
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+    .mobile-menu {
+        display: block;
+    }
+}
+
+.nav-list.active {
+    transform: translateX(0);
+    opacity: 1; 
+    visibility: visible; 
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+.pesquisa{
+    display: flex;
+}
+
+.barra{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    width: 30VH;
+    height: 3vh;
+}
+
+.botaopesquisa{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    width: 5vh;
+    height: 3,5vh;
+}
+  
+
+/*carrossel*/
+
+section.slider{
+    margin-top: 5vh;
+    margin: 0 auto;
+    width: 100vh;
+    height: auto;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.slider-content{
+    width: 400%;
+    height: auto;
+    display: flex;
+}
+
+.slider-content input{
+   display: none; 
+}
+
+.slide-box{
+    width: 25%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 1s;
+}
+
+.slide-box img{
+    width: 100%;
+}
+
+.nav-manual, .nav-auto{
+    position: absolute;
+    width: 100%;
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.nav-manual .manual-btn, .nav-auto div{
+    border: 1px solid #ff0054;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.23s;
+    
+}
+
+.nav-manual .manual-btn:not(:last-child),.nav-auto div:not(:last-child){
+    margin-right: 10px;
+}
+
+.nav-manual .manual-btn:hover{
+    background-color: #ff0054;
+}
+
+#radio1:checked ~ .nav-auto .auto-btn1, #radio2:checked ~ .nav-auto .auto-btn2, #radio3:checked ~ .nav-auto .auto-btn3, #radio4:checked ~ .nav-auto .auto-btn4{
+    background-color: #ff0054;
+}
+
+#radio1:checked ~ .primeiro{
+    margin-left: 0%;
+     
+}
+
+#radio2:checked ~ .primeiro{
+    margin-left: -25%;
+    
+}
+
+
+#radio3:checked ~ .primeiro{
+    margin-left: -50%;
+    
+}
+
+
+#radio4:checked ~ .primeiro{
+    margin-left: -75%;
+    
+}
+/*Divs de noticias*/
+.news-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.news-content {
+    max-width: 600px;
+    text-align: left;    
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #ffffff;
+}
+
+.news-image {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.news-content h2 a {
+    color: #22a8db;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.news-content h2 a:hover {
+    opacity: 0.8;
+}
+
+.news-content p {
+    color: #333;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+
+.botaoNoticias{
+    margin-left: 27%;
+}
