@@ -1,7 +1,10 @@
-
 * {
     margin: 0;
     padding: 0;
+}
+body{
+    width: 100%;
+    max-width: 100%;
 }
 a {
     color: #fff;
@@ -164,14 +167,7 @@ section.slider{
     width: 100%;
 }
 
-.nav-manual, .nav-auto{
-    position: absolute;
-    width: 100%;
-    margin-top: 3%;
-    display: flex;
-    justify-content: center;
 
-}
 
 .nav-manual .manual-btn, .nav-auto div{
     border: 1px solid #ff0054;
@@ -263,18 +259,25 @@ section.slider{
 /* imagens banners*/
 
 .rodape{
-margin-top: 5vh;
-
+display: flex;
 background-color: rgb(230, 220, 220);
-height: 100px;
 }
 
 .imgbanners{
-    height: 80px;
-    width: 160px;
-    margin-left: 80px;
+    height: 8vh;
+    width: 25vh;
+    margin-left: 10svh;
 }
 
 #imgbanner1{
     margin-left: 60vh;
+}
+
+#prodape{
+    margin-left: 50px;
+    justify-content: center;
+}
+
+#imagensrodape{
+    margin-top: 4vh;
 }
