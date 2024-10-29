@@ -258,3 +258,23 @@ section.slider{
 .botaoNoticias{
     margin-left: 27%;
 }
+
+
+/* imagens banners*/
+
+.rodape{
+margin-top: 5vh;
+
+background-color: rgb(230, 220, 220);
+height: 100px;
+}
+
+.imgbanners{
+    height: 80px;
+    width: 160px;
+    margin-left: 80px;
+}
+
+#imgbanner1{
+    margin-left: 60vh;
+}
